@@ -1,1 +1,20 @@
-﻿@import '~nativescript-theme-core/css/core.light.css';
+﻿stacklayout {
+  vertical-align: center;
+}
+
+.title {
+  padding: 40;
+  font-size: 32;
+  color: #0a0a0a;
+  font-weight: bold;
+  text-align: center;
+}
+
+.btn {
+  margin: 10;
+  padding: 20;
+  font-size: 23;
+  color: #ffffff;
+  text-align: center;
+  background-color: #0a0a0a;
+}

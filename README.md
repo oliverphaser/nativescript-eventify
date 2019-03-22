@@ -1,40 +1,41 @@
-# Your Plugin Name
+# NativeScript Notify
 
-Add your plugin badges here. See [nativescript-urlhandler](https://github.com/hypery2k/nativescript-urlhandler) for example.
-
-Then describe what's the purpose of your plugin. 
-
-In case you develop UI plugin, this is where you can add some screenshots.
-
-## (Optional) Prerequisites / Requirements
-
-Describe the prerequisites that the user need to have installed before using your plugin. See [nativescript-firebase plugin](https://github.com/eddyverbruggen/nativescript-plugin-firebase) for example.
+Lets you programatically notify a views observer of an event _(just 'tap' for now)_.
 
 ## Installation
-
-Describe your plugin installation steps. Ideally it would be something like:
-
 ```javascript
-tns plugin add <your-plugin-name>
+//app.js
+require("nativescript-notify");
 ```
 
 ## Usage 
 
-Describe any usage specifics for your plugin. Give examples for Android, iOS, Angular if needed. See [nativescript-drop-down](https://www.npmjs.com/package/nativescript-drop-down) for example.
+```xml
+// home.xml
+<Page loaded="pageLoaded">
+	<Label id="label" text="Tap to make me blue" tap="makeBlue" backgroundColor="green" />
+	<Button id="button" text="Tap to make me red" tap="makeRed" backgroundColor="yello" />
+</Page>
+```
+
+```js
+// home.js
+exports.pageLoaded = args => {
+	const page = args.object;
+	const label = page.getViewById("label");
+	const button = page.getViewById("button");
 	
-	```javascript
-    Usage code snippets here
-    ```)
+	// Only works because of the plugin.
+	label.notify({ eventName: "tap", object: label });
+	
+	// Would have worked regardless.
+	button.notify({eventName: "tap", object: button});
+}
+
+exports.makeRed = args => args.object.backgroundColor = "red";
+exports.makeBlue = args => args.object.backgroundColor = "blue";
+```
+
 
 ## API
-
-Describe your plugin methods and properties here. See [nativescript-feedback](https://github.com/EddyVerbruggen/nativescript-feedback) for example.
-    
-| Property | Default | Description |
-| --- | --- | --- |
-| some property | property default value | property description, default values, etc.. |
-| another property | property default value | property description, default values, etc.. |
-    
-## License
-
-Apache License Version 2.0, January 2004
+Use it just like you use `notify` already.

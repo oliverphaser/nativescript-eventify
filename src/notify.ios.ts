@@ -1,5 +1,5 @@
-import { Common } from './notify.common';
+/**
+ * User passes in  the object { eventName: string, object: View }
+ */
 
-export class Notify extends Common {
-
-}
+const notify = object => (object.ios.gestureRecognizers[0].state = 1);

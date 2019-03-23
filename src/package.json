@@ -1,8 +1,9 @@
 {
-  "name": "nativescript-notify",
+  "name": "nativescript-eventify",
   "version": "1.0.0",
-  "description": "Lets you fire tap events from the notify method.",
-  "main": "notify",
+  "description":
+    "NativeScript views have the notify method to notify the observer of changes, but it doesn't always work. NativeScript Eventify does.",
+  "main": "eventify",
   "typings": "index.d.ts",
   "nativescript": {
     "platforms": {
@@ -12,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/mudlabs/nativescript-notify.git"
+    "url": "https://github.com/mudlabs/nativescript-eventify.git"
   },
   "scripts": {
     "tsc": "tsc",
@@ -34,7 +35,7 @@
     "demo.reset":
       "cd ../demo && npx rimraf -- hooks node_modules platforms package-lock.json",
     "plugin.prepare":
-      "npm run build && cd ../demo && tns plugin remove nativescript-notify && tns plugin add ../src",
+      "npm run build && cd ../demo && tns plugin remove nativescript-eventify && tns plugin add ../src",
     "clean":
       "npm run demo.reset && npx rimraf -- node_modules package-lock.json && npm i",
     "ci.tslint":
@@ -47,10 +48,10 @@
     "email": "youremail@yourdomain.com"
   },
   "bugs": {
-    "url": "https://github.com/mudlabs/nativescript-notify/issues"
+    "url": "https://github.com/mudlabs/nativescript-eventify/issues"
   },
   "license": "Apache-2.0",
-  "homepage": "https://github.com/mudlabs/nativescript-notify",
+  "homepage": "https://github.com/mudlabs/nativescript-eventify",
   "readmeFilename": "README.md",
   "devDependencies": {
     "tns-core-modules": "^5.2.0",

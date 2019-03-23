@@ -1,4 +1,4 @@
-import * as Common from "./notify.common";
+import * as Common from "./eventify.common";
 import { ViewBase } from "tns-core-modules/ui/core/view-base";
 
 declare const UIGestureRecognizerStateEnded: number;

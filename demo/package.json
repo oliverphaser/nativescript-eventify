@@ -3,9 +3,9 @@
     "id": "org.nativescript.demo"
   },
   "dependencies": {
+    "nativescript-notify": "file:../src",
     "nativescript-theme-core": "^1.0.4",
     "nativescript-unit-test-runner": "^0.4.1",
-    "nativescript-notify": "file:../src",
     "tns-core-modules": "^5.2.0"
   },
   "devDependencies": {

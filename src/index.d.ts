@@ -1,6 +1,2 @@
-import { Common } from './notify.common';
-export declare class Notify extends Common {
-  // define your typings manually
-  // or..
-  // take the ios or android .d.ts files and copy/paste them here
-}
+import * as Common from "./notify.common";
+export declare function notify(data: Common.EventData): void;

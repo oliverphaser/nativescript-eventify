@@ -15,51 +15,39 @@ Just require it once.
 require("nativescript-eventify");
 ```
 #### tap example
-```xml
-// home-page.xml
-<Page xmlns="http://schemas.nativescript.org/tns.xsd">
-	<StackLayout>
-		<Label id="title" class="title" text="Eventify"/>
-		<Button id="button" class="button" text="Eventify Tap" tap="buttonTap" />
-		<Label id="label" class="label" text="Eventify Tap" tap="toggleLabelColor" />
-	</StackLayout>
-</Page>
-```
-
 ```js
-// home-page.js
+// Assume the view already has the event listeners setup.
 
-exports.buttonTap = args => {
-	const button = args.object;
-	const label = button.parent.getChildById("label");
-	
-	// Will trigger the tap event.
-	label.eventify({ eventName: "tap", object: label });
-};
+// simulate a tap event
+view.eventify({ eventName: "tap", object: view });
 
-exports.toggleLabelColor = args => {
-	const label = args.object;
-	const title = label.parent.getChildById("title");
-	
-	label.animate({
-		backgroundColor: /FF0000/.test(label.backgroundColor) ? "blue" : "red",
-		duration: 320
-	}).then(() => title.text.split("").reverse().join(""));
-}
+// simulate a doubleTap event
+view.eventify({ eventName: "doubleTap", object: view });
+
+// simulate a longPress event
+view.eventify({ eventName: "longPress", object: view});
+// or with the optional info param you can specify the duration of the press
+view.eventify({ eventName: "longPress", object: view }, { duration: 1000 });
+
+// simulate a swipe event
+// must include the direction, here we trigger a left swipe event.
+view.eventify({ eventName: "swipe", object: view }, { direction: "left" });
 ```
+
+Take a look at this [Playground](https://play.nativescript.org/?template=play-js&id=PpA1wb) for a working example.
 
 ## API
 
-| Properties | required | Description |
+| Properties | Required | Description |
 | --- | --- | --- |
 | EventData | Yes | The event name and object, just like using `notify`. |
 | Info | Sometimes | Some of the events, like `swipe` need extra information. |
 
 ### Info
 
-| Event | Required | Description |
-| --- | --- | --- |
-| tap | No | - |
-| doubleTap | No | - |
-| longPress | Optional | Can provide a number for the press duration |
-| swipe | Yes | The swipe direction. Either "left", "up", "right", or "down" |
+| Event | Required | Properties | Description |
+| --- | --- | --- | --- |
+| tap | No | n/a | n/a |
+| doubleTap | No | n/a | n/a |
+| longPress | Optional | duration: number | How long the press should last for, in milliseconds. |
+| swipe | Yes | direction: string | Either "left", "up", "right", or "down" |

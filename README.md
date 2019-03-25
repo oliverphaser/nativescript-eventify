@@ -1,5 +1,7 @@
 # NativeScript Eventify
-NativeScript has a method called `notify` you can use to notify an observable of changes. But you can't use it to trigger events like tap, swipe etc... Enter eventify. 
+NativeScript has a method called `notify` you can use to notify an observable of changes. But you can't use it to trigger events like tap, swipe etc... 
+
+Enter eventify. Now you can call `tap`, `doubelTap`, `longPress`, and `swipe` events programmatically. With `pan`, `pinch`, and `rotate` coming.
 
 ## Installation
 ```
@@ -47,9 +49,17 @@ exports.toggleLabelColor = args => {
 ```
 
 ## API
-Just use it like you use `notify`.
 
 | Properties | required | Description |
 | --- | --- | --- |
-| EventData | YES | The event name and object, just like using `notify`. |
+| EventData | Yes | The event name and object, just like using `notify`. |
 | Info | Sometimes | Some of the events, like `swipe` need extra information. |
+
+### Info
+
+| Event | Required | Description |
+| --- | --- | --- |
+| tap | No | - |
+| doubleTap | No | - |
+| longPress | Optional | Can provide a number for the press duration |
+| swipe | Yes | The swipe direction. Either "left", "up", "right", or "down" |

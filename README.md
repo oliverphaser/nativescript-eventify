@@ -1,7 +1,5 @@
 # NativeScript Eventify
-NativeScript has a method called `notify` you can use to notify an observable of changes. But you can't use it to trigger events like tap, swipe etc... 
-
-Enter eventify. Now you can call `tap`, `doubelTap`, `longPress`, and `swipe` events programmatically. With `pan`, `pinch`, and `rotate` coming.
+NativeScript has a method called `notify` you can use to notify an observable of changes. But you can't use it to trigger events like tap or swipe, enter NativeScript Eventify.
 
 ## Installation
 ```
@@ -51,3 +49,8 @@ Take a look at this [Playground](https://play.nativescript.org/?template=play-js
 | doubleTap | No | n/a | n/a |
 | longPress | Optional | duration: number | How long the press should last for, in milliseconds. |
 | swipe | Yes | direction: string | Either "left", "up", "right", or "down" |
+
+## What's next
+ - Add support for `pan` events
+ - Add support for `pinch` events
+ - Add support for `rotate` events

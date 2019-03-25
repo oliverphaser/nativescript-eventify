@@ -12,7 +12,7 @@ Just require it once.
 //app.js
 require("nativescript-eventify");
 ```
-#### tap example
+
 ```js
 // Assume the view already has the event listeners setup.
 

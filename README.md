@@ -1,41 +1,55 @@
-# NativeScript Notify
-
-Lets you programatically notify a views observer of an event _(just 'tap' for now)_.
+# NativeScript Eventify
+NativeScript has a method called `notify` you can use to notify an observable of changes. But you can't use it to trigger events like tap, swipe etc... Enter eventify. 
 
 ## Installation
-```javascript
-//app.js
-require("nativescript-notify");
+```
+tns plugin add nativescirpt-eventify
 ```
 
 ## Usage 
-
+Just require it once.
+```js
+//app.js
+require("nativescript-eventify");
+```
+#### tap example
 ```xml
-// home.xml
-<Page loaded="pageLoaded">
-	<Label id="label" text="Tap to make me blue" tap="makeBlue" backgroundColor="green" />
-	<Button id="button" text="Tap to make me red" tap="makeRed" backgroundColor="yello" />
+// home-page.xml
+<Page xmlns="http://schemas.nativescript.org/tns.xsd">
+	<StackLayout>
+		<Label id="title" class="title" text="Eventify"/>
+		<Button id="button" class="button" text="Eventify Tap" tap="buttonTap" />
+		<Label id="label" class="label" text="Eventify Tap" tap="toggleLabelColor" />
+	</StackLayout>
 </Page>
 ```
 
 ```js
-// home.js
-exports.pageLoaded = args => {
-	const page = args.object;
-	const label = page.getViewById("label");
-	const button = page.getViewById("button");
-	
-	// Only works because of the plugin.
-	label.notify({ eventName: "tap", object: label });
-	
-	// Would have worked regardless.
-	button.notify({eventName: "tap", object: button});
-}
+// home-page.js
 
-exports.makeRed = args => args.object.backgroundColor = "red";
-exports.makeBlue = args => args.object.backgroundColor = "blue";
+exports.buttonTap = args => {
+	const button = args.object;
+	const label = button.parent.getChildById("label");
+	
+	// Will trigger the tap event.
+	label.eventify({ eventName: "tap", object: label });
+};
+
+exports.toggleLabelColor = args => {
+	const label = args.object;
+	const title = label.parent.getChildById("title");
+	
+	label.animate({
+		backgroundColor: /FF0000/.test(label.backgroundColor) ? "blue" : "red",
+		duration: 320
+	}).then(() => title.text.split("").reverse().join(""));
+}
 ```
 
-
 ## API
-Use it just like you use `notify` already.
+Just use it like you use `notify`.
+
+| Properties | required | Description |
+| --- | --- | --- |
+| EventData | YES | The event name and object, just like using `notify`. |
+| Info | Sometimes | Some of the events, like `swipe` need extra information. |

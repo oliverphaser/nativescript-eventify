@@ -3,20 +3,44 @@ import { ViewBase } from "tns-core-modules/ui/core/view-base";
 
 declare const UIGestureRecognizerStateEnded: number;
 
-//@ts-ignore
-ViewBase.prototype.eventify = function(data: Common.EventData): void {
-  Common.canBeHandledByNotify(data)
-    ? data.object.notify(data)
-    : () => {
-        const index = [...data.object.ios.gestureRecognizers].findIndex(
-          gesture => gesture.numberOfTapsRequired
-        );
+/**
+ * Simulates a tap event.
+ * 
+ * @param viewBase - The object to be touched
+ * 
+ * @returns void
+ */
+const tap = viewBase => {
+  const index = [...viewBase.ios.gestureRecognizers].findIndex(
+    gesture => gesture.numberOfTapsRequired === 1
+  );
 
-        /**
-       * The gesture recognizer has received touches recognized as the end of a continuous gesture. It sends its action message (or messages) at the next cycle of the run loop and resets its state to UIGestureRecognizer.State.possible.
-      */
-        data.object.ios.gestureRecognizers[
-          index
-        ].state = UIGestureRecognizerStateEnded;
-      };
+  /**
+   * Sets the gestureRecognizers state to `3` which will trigger the tap event and then set its state back to `0` (possible).
+  */
+  viewBase.ios.gestureRecognizers[index].state = UIGestureRecognizerStateEnded;
+};
+
+/**
+ * Add the eventify method to the ViewBase prototype chain so it's available to everything that extends from it.
+ * 
+ * @param data - The `eventName` and `object` that would otherwise have been passed to `notify(...)`.
+ * @param info - The additional information needed to execute the event.
+ * 
+ * @returns void
+ */
+//@ts-ignore
+ViewBase.prototype.eventify = function(
+  data: Common.EventData,
+  info: Common.EventInfo
+): void {
+  Common.canBeHandledByNotify(this, data.eventName)
+    ? this.notify(data)
+    : (() => {
+        switch (data.eventName) {
+          case "tap":
+            tap(this);
+            break;
+        }
+      })();
 };

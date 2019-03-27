@@ -1,7 +1,0 @@
-<Page xmlns="http://schemas.nativescript.org/tns.xsd">
-  <StackLayout>
-    <Label id="title" class="title" text="Hello World"/>
-    <Button id="real-button" class="btn" text="Indirect Tap" tap="indirect"/>
-    <Label id="fake-button" class="btn" text="Direct Tap" tap="direct"/>
-  </StackLayout>
-</Page>

@@ -41,7 +41,14 @@
       "npm i && tslint '**/*.ts' --config '../tslint.json' --exclude '**/node_modules/**' --exclude '**/platforms/**'",
     "prepack": "npm run build.native"
   },
-  "keywords": ["NativeScript", "JavaScript", "Android", "iOS"],
+  "keywords": [
+    "NativeScript",
+    "JavaScript",
+    "Android",
+    "iOS",
+    "Gestures",
+    "Events"
+  ],
   "author": {
     "name": "Sam Donald",
     "email": "npm@mudlabs.com.au"

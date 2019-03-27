@@ -28,10 +28,9 @@
     "tslint":
       "cd .. && tslint \"**/*.ts\" --config tslint.json --exclude \"**/node_modules/**\"",
     "plugin.tscwatch": "npm run tsc -- -w",
-    "demo.ios":
-      "npm run tsc && cd ../demo && tns run ios --syncAllFiles --emulator",
+    "demo.ios": "npm run tsc && cd ../demo && tns run ios --syncAllFiles",
     "demo.android":
-      "npm run tsc && cd ../demo && tns run android --syncAllFiles --emulator",
+      "npm run tsc && cd ../demo && tns run android --syncAllFiles",
     "demo.reset":
       "cd ../demo && npx rimraf -- hooks node_modules platforms package-lock.json",
     "plugin.prepare":

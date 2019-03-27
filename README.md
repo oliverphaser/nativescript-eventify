@@ -30,7 +30,7 @@ require("nativescript-eventify");
 view.eventify({ eventName: "tap", object: view });
 ```
 
-Take a look at this [Playground](https://play.nativescript.org/?template=play-js&id=PpA1wb&v=2) for a working example.
+Take a look at this [Playground](https://play.nativescript.org/?template=play-js&id=PpA1wb&v=4) for a working example.
 
 ## API
 

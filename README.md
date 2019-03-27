@@ -1,3 +1,7 @@
+[ios]: https://icomoon.io/icons9f9702a/13/340.svg "iOS"
+[android]: https://icomoon.io/icons9f9702a/13/342.svg "Android"
+
+# ![android] ![ios]
 # NativeScript Eventify
 NativeScript has a method called `notify` you can use to notify an observable of changes. But you can't use it to trigger events like `tap` or `swipe`, enter NativeScript Eventify.
 
@@ -16,9 +20,13 @@ require("nativescript-eventify");
 ```
 
 ```js
-// Assume the view already has the event listeners setup.
+/**
+* home-page.js
+*
+* Assume the view already has the event listner(s) setup.
+*/
 
-// simulate a tap event
+// Simulates a tap event
 view.eventify({ eventName: "tap", object: view });
 ```
 

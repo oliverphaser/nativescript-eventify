@@ -11,14 +11,24 @@ declare const UIGestureRecognizerStateEnded: number;
  * @returns void
  */
 const tap = viewBase => {
-  const index = [...viewBase.ios.gestureRecognizers].findIndex(
-    gesture => gesture.numberOfTapsRequired === 1
-  );
-
-  /**
-   * Sets the gestureRecognizers state to `3` which will trigger the tap event and then set its state back to `0` (possible).
-  */
-  viewBase.ios.gestureRecognizers[index].state = UIGestureRecognizerStateEnded;
+  try {
+    viewBase.ios.gestureRecognizers.enumerateObjectsUsingBlock(function(
+      item,
+      index,
+      stop
+    ) {
+      if (item.numberOfTapsRequired && item.numberOfTapsRequired === 1) {
+        /**
+         * Sets the gestureRecognizers state to `3` which will trigger the tap event and then set its state back to `0` (possible).
+         */
+        viewBase.ios.gestureRecognizers[
+          index
+        ].state = UIGestureRecognizerStateEnded;
+      }
+    });
+  } catch (error) {
+    console.log(error);
+  }
 };
 
 /**

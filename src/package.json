@@ -1,6 +1,6 @@
 {
   "name": "nativescript-eventify",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description":
     "Enables programmatic execution of gesture events in NativeScript applications.",
   "main": "eventify",

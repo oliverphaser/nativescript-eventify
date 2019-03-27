@@ -1,0 +1,10 @@
+<TabViewItem>
+    <TabViewItem.view>
+        <FlexboxLayout alignItems="center" alignContent="center" flexWrap="wrap">
+          <Label class="title" text="Tap"/>
+          <Label class="description" textWrap="true" text="You can tap the Label, but you can also tap the Button and eventify will trigger the Label tap event" />
+          <Button class="button" tap="tapButtonTapped" text="Button" width="100%"/>
+          <Label class="label--eventable" tap="tapLabelTapped" text="Label" width="100%"/>
+        </FlexboxLayout>
+    </TabViewItem.view>
+</TabViewItem>

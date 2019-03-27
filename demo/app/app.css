@@ -1,0 +1,44 @@
+﻿.not-implemented {
+  font-size: 21;
+  font-weight: bold;
+  color: #acaaaa;
+}
+
+.title {
+  font-size: 32;
+  padding: 20 0 10;
+  margin: 3 6 0;
+}
+.description {
+  margin: 0 6 10;
+  font-size: 18;
+}
+
+.button {
+  font-size: 24;
+  padding: 20;
+  margin: 3 0;
+  color: black;
+  background-color: lightgray;
+}
+
+.label--eventable {
+  text-align: center;
+  font-size: 24;
+  padding: 20;
+  margin: 3 0;
+  background-color: #add8a6;
+}
+
+.button--swipe {
+  font-size: 17;
+  padding: 10;
+  min-width: 45;
+  min-height: 45;
+}
+
+.swipable {
+  width: 150;
+  height: 150;
+  background-color: #add8a6;
+}

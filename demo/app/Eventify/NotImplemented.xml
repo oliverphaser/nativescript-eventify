@@ -1,0 +1,7 @@
+<TabViewItem>
+    <TabViewItem.view>
+        <FlexboxLayout justifyContent="center" alignItems="center">
+          <Label text="Not implemented yet" class="not-implemented" />
+        </FlexboxLayout>
+    </TabViewItem.view>
+</TabViewItem>

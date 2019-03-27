@@ -1,0 +1,15 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" xmlns:Eventify="Eventify">
+    <ActionBar title="NativeScript Eventify"></ActionBar>
+    <TabView>
+        <TabView.items>
+          <Eventify:TapEvent title="Tap"/>
+          <Eventify:NotImplemented title="Double Tap"/>
+          <Eventify:NotImplemented title="Long Press"/>
+          <Eventify:NotImplemented title="Swipe"/>
+          <Eventify:NotImplemented title="Pan"/>
+          <Eventify:NotImplemented title="Pinch"/>
+          <Eventify:NotImplemented title="Rotate"/>
+          <Eventify:NotImplemented title="Touch"/>
+        </TabView.items>
+    </TabView>
+</Page>

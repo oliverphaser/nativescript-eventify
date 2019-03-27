@@ -5,7 +5,17 @@
 # NativeScript Eventify
 NativeScript has a method called `notify` you can use to notify an observable of changes. But you can't use it to trigger events like `tap` or `swipe`, enter NativeScript Eventify.
 
-- Currently only supports `tap` events, [see roadmap](#roadmap)
+## Supported Events
+ - `tap`
+
+## Roadmap
+ - Add support for `doubleTap` events
+ - Add support for `longPress` events
+ - Add support for `swipe` events
+ - Add support for `pan` events
+ - Add support for `pinch` events
+ - Add support for `rotate` events
+ - Add support for `touch` events
 
 ## Installation
 ```
@@ -44,12 +54,4 @@ Take a look at this [Playground](https://play.nativescript.org/?template=play-js
 | Event | Required | Properties | Description |
 | --- | --- | --- | --- |
 | tap | No | n/a | n/a |
-
-## Roadmap
- - Add support for `doubleTap` events
- - Add support for `longPress` events
- - Add support for `swipe` events
- - Add support for `pan` events
- - Add support for `pinch` events
- - Add support for `rotate` events
- - Add support for `touch` events
+ 

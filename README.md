@@ -19,7 +19,7 @@ NativeScript has a method called `notify` you can use to notify an observable of
 
 ## Installation
 ```
-tns plugin add nativescirpt-eventify
+tns plugin add nativescript-eventify
 ```
 
 ## Usage 

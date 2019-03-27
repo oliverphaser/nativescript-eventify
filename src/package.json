@@ -2,7 +2,7 @@
   "name": "nativescript-eventify",
   "version": "1.0.0",
   "description":
-    "NativeScript views have the notify method to notify the observer of changes, but it doesn't always work. NativeScript Eventify does.",
+    "Enables programmatic execution of gesture events in NativeScript applications.",
   "main": "eventify",
   "typings": "index.d.ts",
   "nativescript": {
@@ -43,8 +43,8 @@
   },
   "keywords": ["NativeScript", "JavaScript", "Android", "iOS"],
   "author": {
-    "name": "Your Name",
-    "email": "youremail@yourdomain.com"
+    "name": "Sam Donald",
+    "email": "npm@mudlabs.com.au"
   },
   "bugs": {
     "url": "https://github.com/mudlabs/nativescript-eventify/issues"

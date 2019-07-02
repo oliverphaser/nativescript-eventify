@@ -1,6 +1,8 @@
 [ios]: https://icomoon.io/icons9f9702a/13/340.svg "iOS"
 [android]: https://icomoon.io/icons9f9702a/13/342.svg "Android"
+[support]: https://img.shields.io/static/v1.svg?logo=paypal&label=Support&message=Mudlabs&style=for-the-badge&color=0c67b5&labelColor=afb0b9
 
+[![support]](https://paypal.me/mudlabs)
 # ![android] ![ios]
 # NativeScript Eventify
 NativeScript has a method called `notify` you can use to notify an observable of changes. But you can't use it to trigger events like `tap` or `swipe`, enter NativeScript Eventify.

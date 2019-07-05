@@ -1,9 +1,16 @@
-[ios]: https://icomoon.io/icons9f9702a/13/340.svg "iOS"
-[android]: https://icomoon.io/icons9f9702a/13/342.svg "Android"
+[npm]: https://img.shields.io/npm/v/nativescript-eventify.svg?color=949393
+[install size]: https://badgen.net/packagephobia/install/nativescript-eventify?color=949393
+[apple]: https://img.shields.io/badge/apple-%E2%9C%93-949393.svg?logo=apple&logoColor=white
+[android]: https://img.shields.io/badge/android-%E2%9C%93-949393.svg?logo=android&logoColor=white
 [support]: https://img.shields.io/static/v1.svg?logo=paypal&label=Support&message=Mudlabs&style=for-the-badge&color=0c67b5&labelColor=afb0b9
 
+[![npm]](https://www.npmjs.com/package/nativescript-eventify)
+[![install size]](https://www.npmjs.com/package/nativescript-eventify)
+![apple]
+![android]
+<br/>
 [![support]](https://paypal.me/mudlabs)
-# ![android] ![ios]
+
 # NativeScript Eventify
 NativeScript has a method called `notify` you can use to notify an observable of changes. But you can't use it to trigger events like `tap` or `swipe`, enter NativeScript Eventify.
 

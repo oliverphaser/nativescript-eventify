@@ -1,5 +1,5 @@
 import * as Common from "./eventify.common";
-import { ViewBase } from "tns-core-modules/ui/core/view-base";
+import { ViewBase } from "@nativescript/core/ui/core/view-base";
 
 /**
  * Simulates a pointer touching down onto the device.

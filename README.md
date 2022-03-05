@@ -9,7 +9,7 @@
 ![apple]
 ![android]
 <br/>
-[![support]](https://paypal.me/mudlabs)
+[![support]](https://paypal.me/oliverphaser)
 
 # NativeScript Eventify
 NativeScript has a method called `notify` you can use to notify an observable of changes. But you can't use it to trigger events like `tap` or `swipe`, enter NativeScript Eventify.

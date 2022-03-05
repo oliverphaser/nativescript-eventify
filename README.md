@@ -14,8 +14,8 @@
 # NativeScript Eventify
 NativeScript has a method called `notify` you can use to notify an observable of changes. But you can't use it to trigger events like `tap` or `swipe`, enter NativeScript Eventify.
 
-## NativeScript 7 and above
-This will work only on NativeScript 7 and above!
+## NativeScript 8
+This will work only on NativeScript 8.
 
 ## Supported Events
  - `tap`

@@ -1,5 +1,5 @@
-import { topmost } from "tns-core-modules/ui/frame";
-import { getBaseClasses } from "tns-core-modules/utils/types";
+import { topmost } from "@nativescript/core/ui/frame";
+import { getBaseClasses } from "@nativescript/core/utils/types";
 
 // Add supported event names here.
 const eventify_events = ["tap"];

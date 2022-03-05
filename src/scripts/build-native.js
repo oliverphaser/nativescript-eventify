@@ -12,7 +12,7 @@ exec('ns --version', (err, stdout, stderr) => {
 
     // execute 'ns plugin build' for {N} version > 8. This command builds .aar in platforms/android folder.
     if (tnsVersion >= 8) {
-        console.log(`executing 'tns plugin build'`);
+        console.log(`executing 'ns plugin build'`);
         exec('ns plugin build', (err, stdout, stderr) => {
             if (err) {
                 // node couldn't execute the command

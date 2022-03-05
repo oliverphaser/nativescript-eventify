@@ -1,5 +1,4 @@
 const { exec } = require('child_process');
-const semver = require('semver');
 
 exec('ns --version', (err, stdout, stderr) => {
     if (err) {
@@ -8,9 +7,9 @@ exec('ns --version', (err, stdout, stderr) => {
         return;
     }
 
-    const nsVersion = semver.major(stdout);
+    const nsVersion = stdout.split('.')[0]
 
-    // execute 'ns plugin build' for {N} version > 8. This command builds .aar in platforms/android folder.
+    // execute 'tns plugin build' for {N} version > 8. This command builds .aar in platforms/android folder.
     if (nsVersion >= 8) {
         console.log(`executing 'ns plugin build'`);
         exec('ns plugin build', (err, stdout, stderr) => {

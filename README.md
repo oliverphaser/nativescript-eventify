@@ -10,15 +10,19 @@
 [![support]](https://paypal.me/oliverphaser)
 
 # NativeScript Eventify
+
 NativeScript has a method called `notify` you can use to notify an observable of changes. But you can't use it to trigger events like `tap` or `swipe`, enter NativeScript Eventify.
 
 ## NativeScript 8
+
 This will work only on NativeScript 8.
 
 ## Supported Events
+
  - `tap`
 
 ## Roadmap
+
  - Add support for `doubleTap` events
  - Add support for `longPress` events
  - Add support for `swipe` events
@@ -28,15 +32,17 @@ This will work only on NativeScript 8.
  - Add support for `touch` events
 
 ## Installation
+
 ```
-tns plugin add nativescript-eventify
+ns plugin add @oliverphaser/nativescript-eventify
 ```
 
 ## Usage 
+
 Just require it once.
 ```js
 //app.js
-require("nativescript-eventify");
+require("@oliverphaser/nativescript-eventify");
 ```
 
 ```js

@@ -3,7 +3,7 @@
 [android]: https://img.shields.io/badge/android-%E2%9C%93-949393.svg?logo=android&logoColor=white
 [support]: https://img.shields.io/static/v1.svg?logo=paypal&label=Support&message=oliverphaser&style=for-the-badge&color=0c67b5&labelColor=afb0b9
 
-[![npm]](https://www.npmjs.com/package/nativescript-eventify)
+[![npm]](https://www.npmjs.com/package/@oliverphaser/nativescript-eventify)
 ![apple]
 ![android]
 <br/>

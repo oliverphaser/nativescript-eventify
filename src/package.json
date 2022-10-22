@@ -1,6 +1,6 @@
 {
   "name": "@oliverphaser/nativescript-eventify",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "description":
     "Enables programmatic execution of gesture events in NativeScript applications. Forked from mudlabs and updated for NativeScript 8.",
   "main": "eventify",
